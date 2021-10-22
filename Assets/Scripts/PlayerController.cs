@@ -61,10 +61,6 @@ public class PlayerController : MonoBehaviour
     {
         CustomUpdate();
     }
-    private void FixedUpdate()
-    {
-        CustomFixedUpdate();
-    }
     private void OnCollisionEnter2D(Collision2D other)
     {
         LayerMask otheLayerMask = other.gameObject.layer;
