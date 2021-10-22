@@ -9,6 +9,7 @@ public class Global : MonoBehaviour
     [SerializeField] private LayerMask layerMaskPlatform;
     [SerializeField] private LayerMask layerMaskReward;
     [SerializeField] private LayerMask layerMaskKiller;
+    [SerializeField] private LayerMask layerMaskDeSpawner;
 
     private void Awake()
     {
@@ -29,5 +30,9 @@ public class Global : MonoBehaviour
     public bool LayerEqualKiller(int layer)
     {
         return layerMaskKiller == (layerMaskKiller | (1 << layer));
+    }
+    public bool LayerEqualDeSpawner(int layer)
+    {
+        return layerMaskDeSpawner == (layerMaskDeSpawner | (1 << layer));
     }
 }

@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec4f05a426fb064282ef26fe1d936d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inUse: 0
+  hitted: {fileID: 4719612227602226303}
 --- !u!1 &7265167113272466282
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,19 +138,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7265167113272466282}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!61 &7265167113272466280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,6 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7265167114243967965}
   - component: {fileID: 7265167114243967968}
+  - component: {fileID: 4719612227602226303}
   - component: {fileID: 7265167114243967971}
   - component: {fileID: 7265167114243967970}
   m_Layer: 11
@@ -258,6 +261,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4719612227602226303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7265167114243967964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828efd4dc1a892d46ad989c9ad45d194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7265167114243967971
 Rigidbody2D:
   serializedVersion: 4
@@ -266,19 +281,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7265167114243967964}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!61 &7265167114243967970
 BoxCollider2D:
   m_ObjectHideFlags: 0

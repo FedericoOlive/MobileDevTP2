@@ -2,16 +2,52 @@
 using UnityEngine;
 public class ObstaclesManager : MonoBehaviour
 {
-    private List<Obstacle> obstaclesList = new List<Obstacle>();
+    public Transform cam;
+    public List<Obstacle> obstaclesList = new List<Obstacle>();
+    private List<int> indexList = new List<int>();
+
     public Vector2 rangeMinMax = new Vector2();
     private float distance = 4;
+    public GameObject spawner;
+    public GameObject deSpawner;
+    private float lastPosCam;
 
-    void Start()
+    private void Awake()
     {
-        
+        if(!cam)
+            cam = Camera.main.transform;
     }
-    void Update()
+    private void Update()
     {
-        
+        if (cam.position.x > lastPosCam + distance)
+        {
+            SpawnObstacle();
+            lastPosCam = cam.position.x;
+        }
+    }
+    public Obstacle GetAvailableObstacle()
+    {
+        SetAvailableList();
+        int index = indexList[Random.Range(0, indexList.Count)];
+        return obstaclesList[index];
+    }
+    public void SetAvailableList()
+    {
+        indexList.Clear();
+        for (int i = 0; i < obstaclesList.Count; i++)
+        {
+            if (!obstaclesList[i].inUse)
+            {
+                indexList.Add(i);
+            }
+        }
+    }
+    void SpawnObstacle()
+    {
+        Obstacle obstacle = GetAvailableObstacle();
+        obstacle.inUse = true;
+        Vector2 pos = spawner.transform.position;
+        pos.y = Random.Range(rangeMinMax.x, rangeMinMax.y);
+        obstacle.transform.position = pos;
     }
 }

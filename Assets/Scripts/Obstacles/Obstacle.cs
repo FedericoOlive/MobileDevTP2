@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
-    private bool inUse;
-    void Start()
+    public bool inUse;
+    public Hitted hitted;
+
+    private void Start()
     {
-        
+        hitted.OnHitted += OnHitted;
     }
-    void Update()
+    public void OnHitted()
     {
-        
+        inUse = false;
     }
 }
