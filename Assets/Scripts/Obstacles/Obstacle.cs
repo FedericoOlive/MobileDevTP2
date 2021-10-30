@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 
     private void Start()
     {
-        hitted.OnHitted += OnHitted;
+        hitted.onHitted += OnHitted;
     }
     public void OnHitted()
     {

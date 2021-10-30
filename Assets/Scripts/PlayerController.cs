@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         initialPosition = transform.position;
-        CustomUpdate = PauseUpdate;
+        CustomUpdate = GamePlayUpdate;
     }
     void Update()
     {
