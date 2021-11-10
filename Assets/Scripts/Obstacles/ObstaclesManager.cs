@@ -7,7 +7,7 @@ public class ObstaclesManager : MonoBehaviour
     private List<int> indexList = new List<int>();
 
     public Vector2 rangeMinMax = new Vector2();
-    private float distance = 4;
+    [SerializeField] private float distanceSpawn = 4;
     public GameObject spawner;
     public GameObject deSpawner;
     private float lastPosCam;
@@ -19,7 +19,7 @@ public class ObstaclesManager : MonoBehaviour
     }
     private void Update()
     {
-        if (cam.position.x > lastPosCam + distance)
+        if (cam.position.x > lastPosCam + distanceSpawn)
         {
             SpawnObstacle();
             lastPosCam = cam.position.x;
