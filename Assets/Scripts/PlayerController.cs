@@ -7,30 +7,32 @@ public class PlayerController : MonoBehaviour
 // ReSharper disable InconsistentNaming
     private delegate void Method();
     private Method CustomUpdate;
+    private Method PlayerInteract;
 // ReSharper restore InconsistentNaming
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
-    public Action onDie;
-    public Action<int> onCollect;
-    
-    private int jumps;
-    private int score;
-    private float gamePlayTime;
+    public Action onImpactObstacle;
+    public Action onJump;
+    public Action onAvoidObstacle;
+    public Action<Item> onCollect;
 
     private float jumpForce = 5;
     private Vector2 initialPosition;
-    
+    public bool die;
+
     private void Awake()
     {
+        Time.timeScale = 0;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Start()
     {
+        PlayerInteract = PlayerStartGame;
         initialPosition = transform.position;
-        CustomUpdate = GamePlayUpdate;
+        CustomUpdate = UpdateWaitingInput;
     }
     void Update()
     {
@@ -41,55 +43,92 @@ public class PlayerController : MonoBehaviour
         LayerMask otheLayerMask = other.gameObject.layer;
         if (Global.Get().LayerEqualKiller(otheLayerMask))
         {
-            Die();
+            Debug.Log("Player choca contra: " + other.name, gameObject);
+            ImpactObstacle();
         }
         else if (Global.Get().LayerEqualReward(otheLayerMask))
         {
             Item item = other.gameObject.GetComponent<Item>();
             if (item)
             {
-                CollectPoints(item.GetReward());
+                Debug.Log("Player recolecta contra: " + other.name, gameObject);
+                onCollect?.Invoke(item);
             }
         }
-    }
-    void GamePlayUpdate()
-    {
-        gamePlayTime += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
-            Jump();
-        if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Global.Get().LayerEqualAvoidedObstacle(otheLayerMask))
         {
-            CustomUpdate = PauseUpdate;
-            Time.timeScale = 0;
+            onAvoidObstacle?.Invoke();
         }
     }
-    void PauseUpdate()
+    public void GoToWaitingInput()
+    {
+        CustomUpdate = UpdateWaitingInput;
+        PlayerInteract = PlayerStartGame;
+    }
+    void UpdateWaitingInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayerStartGame();
+        }
+    }
+    void UpdateGamePlay()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+    }
+    void UpdatePause()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            CustomUpdate = PauseUpdate;
+            CustomUpdate = UpdateGamePlay;
             Time.timeScale = 1;
         }
     }
+    void UpdateDie()
+    {
+
+    }
     void Jump()
     {
-        jumps++;
+        onJump?.Invoke();
         rb.velocity = new Vector2(rb.velocity.x, 0.0f);
         rb.AddForce((Vector2.up * jumpForce), ForceMode2D.Impulse);
     }
+    void PlayerStartGame()
+    {
+        PlayerInteract = Jump;
+        CustomUpdate = UpdateGamePlay;
+        Time.timeScale = 1;
+    }
+    public void PlayerInteractable()
+    {
+        if (!die)
+        {
+            PlayerInteract();
+        }
+    }
+    public void EjectPause(bool onPause)
+    {
+        if (onPause)
+            CustomUpdate = UpdatePause;
+        else
+            CustomUpdate = UpdateGamePlay;
+    }
+    public void ImpactObstacle()
+    {
+        onImpactObstacle?.Invoke();
+    }
     public void Die()
     {
-        onDie?.Invoke();
+        die = true;
+        CustomUpdate = UpdateDie;
     }
     public void Restart()
     {
-        score = 0;
         transform.position = initialPosition;
         rb.velocity = Vector2.zero;
-    }
-    public void CollectPoints(int points)
-    {
-        score += points;
-        onCollect?.Invoke(score);
     }
 }

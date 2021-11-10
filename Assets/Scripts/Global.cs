@@ -1,20 +1,14 @@
 ﻿using UnityEngine;
-public class Global : MonoBehaviour
+public class Global : MonoBehaviourSingleton<Global>
 {
-    private static Global _funcs;
-    public static Global Get() => _funcs;
-
     [Header("Layers")]
     [SerializeField] private LayerMask layerMaskPlayer;
     [SerializeField] private LayerMask layerMaskPlatform;
     [SerializeField] private LayerMask layerMaskReward;
     [SerializeField] private LayerMask layerMaskKiller;
     [SerializeField] private LayerMask layerMaskDeSpawner;
+    [SerializeField] private LayerMask layerMaskAvoidedObstacle;
 
-    private void Awake()
-    {
-        _funcs = this;
-    }
     public bool LayerEqualPlayer(int layer)
     {
         return layerMaskPlayer == (layerMaskPlayer | (1 << layer));
@@ -34,5 +28,10 @@ public class Global : MonoBehaviour
     public bool LayerEqualDeSpawner(int layer)
     {
         return layerMaskDeSpawner == (layerMaskDeSpawner | (1 << layer));
+    }
+    public bool LayerEqualAvoidedObstacle(int layer)
+    {
+        return layerMaskAvoidedObstacle == (layerMaskAvoidedObstacle | (1 << layer));
+
     }
 }
