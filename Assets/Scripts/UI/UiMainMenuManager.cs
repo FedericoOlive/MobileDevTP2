@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UiMainMenuManager : MonoBehaviour
+public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
 {
     [SerializeField] private List<CanvasGroup> menues = new List<CanvasGroup>();
     public enum Menues { Main, Credits }
     public Menues menuActual = Menues.Main;
     [SerializeField] private float timeTransition = 0.5f;
     private float onTime;
+    public TextMeshProUGUI textVersion;
 
     private void Start()
     {
+        if (textVersion)
+            textVersion.text = Application.version;
         ResetMenu();
     }
     private void Reset()
@@ -58,7 +62,7 @@ public class UiMainMenuManager : MonoBehaviour
 
         while (onTime < maxTime)
         {
-            onTime += Time.deltaTime;
+            onTime += Time.unscaledDeltaTime;
             float fade = onTime / maxTime;
             on.alpha = fade;
             off.alpha = 1 - fade;
