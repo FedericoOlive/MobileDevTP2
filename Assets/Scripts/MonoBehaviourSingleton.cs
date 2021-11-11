@@ -7,7 +7,6 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
     {
         return instance;
     }
-
     public virtual void Awake()
     {
         if(instance == null)
