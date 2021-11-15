@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
 {
     [SerializeField] private List<CanvasGroup> menues = new List<CanvasGroup>();
-    public enum Menues { Main, Credits }
+    public enum Menues { Main, Credits, GameOver }
     public Menues menuActual = Menues.Main;
     [SerializeField] private float timeTransition = 0.5f;
     private float onTime;

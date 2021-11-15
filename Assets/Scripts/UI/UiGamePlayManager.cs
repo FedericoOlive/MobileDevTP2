@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
 {
     public PlayerController player;
-
+    public GameOverContent gameOverContent;
     private PlayerStats playerStats;
     public TextMeshProUGUI textScore;
     public TextMeshProUGUI textLifes;
@@ -47,4 +47,16 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     {
         textTime.text = playerStats.gamePlayTime.ToString("F2");
     }
+    public void UpdateGameOver()
+    {
+        gameOverContent.textGamePlayTime.text = playerStats.gamePlayTime.ToString("F2");
+        gameOverContent.textScore.text = playerStats.score.ToString();
+        gameOverContent.textMoney.text = playerStats.money.ToString();
+    }
+}
+[Serializable] public class GameOverContent
+{
+    public TextMeshProUGUI textScore;
+    public TextMeshProUGUI textGamePlayTime;
+    public TextMeshProUGUI textMoney;
 }

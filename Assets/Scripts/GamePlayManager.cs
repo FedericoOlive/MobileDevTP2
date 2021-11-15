@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
 {
     public Transform cam;
@@ -61,8 +62,11 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     void PlayerDie()
     {
         Debug.Log("Player Die.");
+        UiMainMenuManager.Get().SwitchPanel(2);
         player.Die();
         Time.timeScale = 0;
+        SaveStats();
+        UiGamePlayManager.Get().UpdateGameOver();
     }
     public void PlayerJump()
     {
@@ -87,6 +91,18 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
             UiGamePlayManager.Get().Pause(false);
             UiMainMenuManager.Get().SwitchPanel(0);
         }
+    }
+    void SaveStats()
+    {
+        Debug.Log("----------Stats----------");
+        Debug.Log("Jumps:" + playerStats.jumps);
+        Debug.Log("Lifes:" + playerStats.lifes);
+        Debug.Log("Score:" + playerStats.score);
+        Debug.Log("GamePlayTime:" + playerStats.gamePlayTime);
+        Debug.Log("Money:" + playerStats.money);
+        Debug.Log("Recolected:" + playerStats.recolected);
+        Debug.Log("ObstaclesAvoided:" + playerStats.obstaclesAvoided);
+        Debug.Log("----------Stats----------");
     }
     // ---------------------------------
     public PlayerStats GetPlayerStats() => playerStats;

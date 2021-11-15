@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         PlayerInteract = PlayerStartGame;
         initialPosition = transform.position;
         CustomUpdate = UpdateWaitingInput;
+        rb.velocity = Vector3.zero;
     }
     void Update()
     {
@@ -78,6 +79,31 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        float currentAngle = transform.eulerAngles.z;
+        float minAngle = -50;
+        float maxAngle = 50;
+
+        float minVel = -6;
+        float maxVel = 6;
+        float currentVel = rb.velocity.y;
+
+        if (currentAngle < minAngle)
+            currentAngle = minAngle;
+        if (currentAngle > maxAngle)
+            currentAngle = maxAngle;
+
+        if (currentVel > 0)
+        {
+            float percentVel = currentVel / maxVel;
+            currentAngle = Mathf.Abs(maxAngle * percentVel);
+        }
+        else
+        {
+            float percentVel = currentVel / minVel;
+            currentAngle = -Mathf.Abs(minAngle * percentVel);
+        }
+        transform.rotation = Quaternion.Euler(0, 0, currentAngle);
     }
     void UpdatePause()
     {
