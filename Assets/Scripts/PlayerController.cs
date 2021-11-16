@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 initialPosition;
     public bool die;
 
+    private float minAngle = -50;
+    private float maxAngle = 50;
+    private float minVel = -6;
+    private float maxVel = 4;
+
     private void Awake()
     {
         Time.timeScale = 0;
@@ -81,18 +86,7 @@ public class PlayerController : MonoBehaviour
         }
 
         float currentAngle = transform.eulerAngles.z;
-        float minAngle = -50;
-        float maxAngle = 50;
-
-        float minVel = -6;
-        float maxVel = 6;
         float currentVel = rb.velocity.y;
-
-        if (currentAngle < minAngle)
-            currentAngle = minAngle;
-        if (currentAngle > maxAngle)
-            currentAngle = maxAngle;
-
         if (currentVel > 0)
         {
             float percentVel = currentVel / maxVel;
@@ -103,6 +97,10 @@ public class PlayerController : MonoBehaviour
             float percentVel = currentVel / minVel;
             currentAngle = -Mathf.Abs(minAngle * percentVel);
         }
+
+        if (currentAngle > maxAngle) currentAngle = maxAngle;
+        if (currentAngle < minAngle) currentAngle = minAngle;
+        
         transform.rotation = Quaternion.Euler(0, 0, currentAngle);
     }
     void UpdatePause()

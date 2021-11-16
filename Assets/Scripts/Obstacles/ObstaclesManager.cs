@@ -2,6 +2,7 @@
 using UnityEngine;
 public class ObstaclesManager : MonoBehaviour
 {
+    public RewardsManager rewardsManager;
     public Transform cam;
     public List<Obstacle> obstaclesList = new List<Obstacle>();
     private List<int> indexList = new List<int>();
@@ -49,5 +50,15 @@ public class ObstaclesManager : MonoBehaviour
         Vector2 pos = spawner.transform.position;
         pos.y = Random.Range(rangeMinMax.x, rangeMinMax.y);
         obstacle.transform.position = pos;
+
+        int random = Random.Range(0, 100);
+        if (random < obstacle.chanceApearReward)
+        {
+            GameObject reward = rewardsManager.InstantiateReward();
+            float x = obstacle.transform.position.x - distanceSpawn / 2;
+            float y = 0;
+            float z = 0;
+            reward.transform.position = new Vector3(x, y, z);
+        }
     }
 }

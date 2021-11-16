@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
 {
     public Transform cam;
@@ -32,11 +31,20 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     public void CollectPoints(Item item)
     {
+        Debug.Log("RewardType: " + item.typeReward);
         switch (item.typeReward)
         {
             case Item.TypeReward.Life:
-                playerStats.lifes += item.amount;
-                UiGamePlayManager.Get().LifesUpdated();
+                if (playerStats.lifes < 5)
+                {
+                    playerStats.lifes += item.amount;
+                    UiGamePlayManager.Get().LifesUpdated();
+                }
+                else
+                {
+                    playerStats.score += 100;
+                    UiGamePlayManager.Get().ScoreUpdated();
+                }
                 break;
             case Item.TypeReward.Money:
                 playerStats.money += item.amount;
@@ -48,6 +56,8 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
                 break;
         }
         playerStats.recolected++;
+        item.transform.position = Vector3.zero;
+        item.inUse = false;
     }
     public void PlayerImpact()
     {
