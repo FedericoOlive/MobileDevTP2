@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 5313ff641064c6d43949980c2cc53078
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 623840366544960423
+    second: ObstacleSilverBase
+  - first:
+      213: 1399327644652878681
+    second: ObstacleSilverColumn
+  - first:
+      213: 8609492153827970993
+    second: BackGround01
+  - first:
+      213: -1463960574117443859
+    second: BackGround02
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,11 +145,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ObstacleSilverBase
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 354
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab3674128358a800800000000000000
+      internalID: 623840366544960423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSilverColumn
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 136
+        width: 48
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b3bef24196b6310800000000000000
+      internalID: 1399327644652878681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGround01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 288
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfcd65bf7f0b7770800000000000000
+      internalID: 8609492153827970993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGround02
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 513
+        width: 288
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de68d8e3d97feabe0800000000000000
+      internalID: -1463960574117443859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 026db70e77bf1dd4393980ff60f9327b
     internalID: 0
     vertices: []
     indices: 

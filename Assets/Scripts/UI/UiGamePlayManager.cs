@@ -11,6 +11,7 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     public TextMeshProUGUI textMoney;
     public TextMeshProUGUI textTime;
     public Image imgLifes;
+    public UiLifes uiLifes;
 
     private float onTime;
 
@@ -36,6 +37,7 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     }
     public void LifesUpdated()
     {
+        uiLifes.UpdateLifes();
         textLifes.text = playerStats.lifes.ToString();
     }
     public void MoneyUpdated()

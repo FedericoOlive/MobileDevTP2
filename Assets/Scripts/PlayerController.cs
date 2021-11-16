@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Action onImpactObstacle;
     public Action onJump;
     public Action onAvoidObstacle;
+    public Action onDie;
     public Action<Item> onCollect;
 
     private float jumpForce = 5;
@@ -64,6 +65,10 @@ public class PlayerController : MonoBehaviour
         else if (Global.Get().LayerEqualAvoidedObstacle(otheLayerMask))
         {
             onAvoidObstacle?.Invoke();
+        }
+        else if (Global.Get().LayerEqualInstaKiller(otheLayerMask))
+        {
+            onDie?.Invoke();
         }
     }
     public void GoToWaitingInput()

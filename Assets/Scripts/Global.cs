@@ -8,6 +8,7 @@ public class Global : MonoBehaviourSingleton<Global>
     [SerializeField] private LayerMask layerMaskKiller;
     [SerializeField] private LayerMask layerMaskDeSpawner;
     [SerializeField] private LayerMask layerMaskAvoidedObstacle;
+    [SerializeField] private LayerMask layerMaskInstaKiller;
 
     public bool LayerEqualPlayer(int layer)
     {
@@ -32,6 +33,9 @@ public class Global : MonoBehaviourSingleton<Global>
     public bool LayerEqualAvoidedObstacle(int layer)
     {
         return layerMaskAvoidedObstacle == (layerMaskAvoidedObstacle | (1 << layer));
-
+    }
+    public bool LayerEqualInstaKiller(int layer)
+    {
+        return layerMaskInstaKiller == (layerMaskInstaKiller | (1 << layer));
     }
 }

@@ -17,6 +17,7 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
         player.onImpactObstacle += PlayerImpact;
         player.onJump += PlayerJump;
         player.onAvoidObstacle += PlayerAvoidObstacle;
+        player.onDie += PlayerInstaDie;
     }
     void Update()
     {
@@ -68,6 +69,15 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
             PlayerDie();
         }
         UiGamePlayManager.Get().LifesUpdated();
+    }
+
+    void PlayerInstaDie()
+    {
+        for (int i = playerStats.lifes; i > 0; i--)
+        {
+            Debug.Log("InstaKiller.");
+            PlayerImpact();
+        }
     }
     void PlayerDie()
     {

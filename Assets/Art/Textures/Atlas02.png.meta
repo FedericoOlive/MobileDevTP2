@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: aeddb6ad0da26604aa1c40b8680c5a39
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7825291451231400654
+    second: BackGround01
+  - first:
+      213: 839865160352696897
+    second: Atlas02_20
+  - first:
+      213: 6280582674537589283
+    second: Atlas02_22
+  - first:
+      213: 2071730915134185646
+    second: ObstacleBrownColumn
+  - first:
+      213: -4119759467420334938
+    second: ObstacleBrownBase
+  - first:
+      213: 4316782683356500068
+    second: ObstacleYellowColumn
+  - first:
+      213: 6190052300008326737
+    second: BackGround02
+  - first:
+      213: -7811634408872351414
+    second: ObstacleYellowBase
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,11 +157,137 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BackGround01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 286
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d8371a2eaf66390800000000000000
+      internalID: -7825291451231400654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleBrownColumn
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 61
+        width: 48
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0a4c27a4440cc10800000000000000
+      internalID: 2071730915134185646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleBrownBase
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4cb50879ca3d6c0800000000000000
+      internalID: -4119759467420334938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleYellowColumn
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 61
+        width: 48
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460950eaafa48eb30800000000000000
+      internalID: 4316782683356500068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGround02
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 512
+        width: 286
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156061345cb77e550800000000000000
+      internalID: 6190052300008326737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleYellowBase
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 308
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49e1f794ef779390800000000000000
+      internalID: -7811634408872351414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1237b78b8cbf3034080d0fe002fae7c3
     internalID: 0
     vertices: []
     indices: 

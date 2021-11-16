@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: b021d2ca0f8fa33419058fcec9b89f91
+guid: a2c1bb1853dcf704b931b3ec56d7b0b8
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1380325239189948492
-    second: UiPause
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -136,28 +133,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: UiPause
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 773
-        width: 41
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c484c64ed76e72310800000000000000
-      internalID: 1380325239189948492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
