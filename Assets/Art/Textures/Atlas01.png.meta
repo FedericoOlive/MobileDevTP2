@@ -58,7 +58,7 @@ TextureImporter:
     second: PlayerBlue00
   - first:
       213: -1689368201722285580
-    second: Atlas01_44
+    second: ButtonPause
   - first:
       213: 3836215785300493143
     second: Tap
@@ -238,27 +238,6 @@ TextureImporter:
       bones: []
       spriteID: 2fede15be85c98ad0800000000000000
       internalID: -2699409284917174542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas01_41
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 392
-        width: 226
-        height: 114
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 376bade2e690dcf10800000000000000
-      internalID: 2291498154238588531
       vertices: []
       indices: 
       edges: []
@@ -579,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas01_44
+      name: ButtonPause
       rect:
         serializedVersion: 2
         x: 242
