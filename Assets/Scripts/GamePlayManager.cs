@@ -21,7 +21,9 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     void Update()
     {
-        playerStats.gamePlayTime += Time.deltaTime;
+        float time = Time.deltaTime;
+        playerStats.gamePlayTime += time;
+        playerStats.score += (time * 10);
     }
     private void FixedUpdate()
     {

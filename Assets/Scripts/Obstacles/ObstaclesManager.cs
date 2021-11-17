@@ -52,7 +52,7 @@ public class ObstaclesManager : MonoBehaviour
         obstacle.transform.position = pos;
 
         int random = Random.Range(0, 100);
-        if (random < obstacle.chanceApearReward)
+        if (random <= obstacle.chanceApearReward)
         {
             GameObject reward = rewardsManager.InstantiateReward();
             float x = obstacle.transform.position.x - distanceSpawn / 2;

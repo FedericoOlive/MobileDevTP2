@@ -3,7 +3,7 @@ public class Obstacle : MonoBehaviour
 {
     public bool inUse;
     public Hitted hitted;
-    public int chanceApearReward = 100;
+    [HideInInspector] public int chanceApearReward = 40;
 
     private void Start()
     {

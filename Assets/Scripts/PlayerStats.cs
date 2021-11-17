@@ -4,7 +4,7 @@ public class PlayerStats
 {
     public int jumps;
     public int lifes = 3;
-    public int score;
+    public float score;
     public float gamePlayTime;
     public int money;
     public int recolected;

@@ -5,6 +5,27 @@ TextureImporter:
   - first:
       213: 1380325239189948492
     second: UiPause
+  - first:
+      213: 4323123366795932705
+    second: UiButtonPlay
+  - first:
+      213: 8425175917493064443
+    second: UiButtonRetry
+  - first:
+      213: 5548953550614408853
+    second: UiButtonClose
+  - first:
+      213: 4162986673199266422
+    second: UiButtonHome
+  - first:
+      213: 7272100700213507737
+    second: UiButtonInfo
+  - first:
+      213: -2469570258440193105
+    second: UiButtonExit
+  - first:
+      213: -2718900787430450175
+    second: UiButtonShop
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -146,7 +167,7 @@ TextureImporter:
         width: 41
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,6 +175,153 @@ TextureImporter:
       bones: []
       spriteID: c484c64ed76e72310800000000000000
       internalID: 1380325239189948492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonPlay
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1067
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124ff061cc1defb30800000000000000
+      internalID: 4323123366795932705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonRetry
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 382
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf29954cbdc3ce470800000000000000
+      internalID: 8425175917493064443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonClose
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 529
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ea38bcad7d10d40800000000000000
+      internalID: 5548953550614408853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonHome
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1067
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a3ab4a256e5c930800000000000000
+      internalID: 4162986673199266422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonInfo
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1018
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996781fbe01bbe460800000000000000
+      internalID: 7272100700213507737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonExit
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 333
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab7dcd2fe25abdd0800000000000000
+      internalID: -2469570258440193105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonShop
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 822
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c9da1a326844ad0800000000000000
+      internalID: -2718900787430450175
       vertices: []
       indices: 
       edges: []

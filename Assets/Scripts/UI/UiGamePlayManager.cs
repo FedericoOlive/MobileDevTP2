@@ -33,7 +33,7 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     }
     public void ScoreUpdated()
     {
-        textScore.text = playerStats.score.ToString();
+        textScore.text = playerStats.score.ToString("F0");
     }
     public void LifesUpdated()
     {
@@ -47,11 +47,12 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     public void TimeUpdated()
     {
         textTime.text = playerStats.gamePlayTime.ToString("F2");
+        ScoreUpdated();
     }
     public void UpdateGameOver()
     {
         gameOverContent.textGamePlayTime.text = playerStats.gamePlayTime.ToString("F2");
-        gameOverContent.textScore.text = playerStats.score.ToString();
+        gameOverContent.textScore.text = playerStats.score.ToString("F0");
         gameOverContent.textMoney.text = playerStats.money.ToString();
     }
 }

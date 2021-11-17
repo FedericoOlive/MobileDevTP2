@@ -23,6 +23,21 @@ TextureImporter:
   - first:
       213: 2970232777584890941
     second: GameGUIEasyFREEApart_6
+  - first:
+      213: 4333784128749080702
+    second: UiPanelShop
+  - first:
+      213: -5980102286227260810
+    second: UiPanelPause
+  - first:
+      213: 4032251586774714481
+    second: UiPanelEmpty
+  - first:
+      213: -3766370388156592990
+    second: UiPanelEmpty2
+  - first:
+      213: -1777292356221173383
+    second: UiPanelTitleEmpty
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -298,6 +313,111 @@ TextureImporter:
       bones: []
       spriteID: d345b2869f2683920800000000000000
       internalID: 2970232777584890941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiPanelShop
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 2
+        width: 964
+        height: 1250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70905724b1b42c30800000000000000
+      internalID: 4333784128749080702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiPanelPause
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 0
+        width: 964
+        height: 1250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a3ce497a8620da0800000000000000
+      internalID: -5980102286227260810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiPanelEmpty
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 4572
+        width: 964
+        height: 1191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17846b2547f65f730800000000000000
+      internalID: 4032251586774714481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiPanelEmpty2
+      rect:
+        serializedVersion: 2
+        x: 7477
+        y: 3658
+        width: 456
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac4069461a2bbbc0800000000000000
+      internalID: -3766370388156592990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiPanelTitleEmpty
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 4744
+        width: 815
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9718b6db40ac557e0800000000000000
+      internalID: -1777292356221173383
       vertices: []
       indices: 
       edges: []
