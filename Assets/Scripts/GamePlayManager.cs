@@ -89,6 +89,8 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
         Time.timeScale = 0;
         SaveStats();
         UiGamePlayManager.Get().UpdateGameOver();
+        double timeplayed = DataPersistant.Get().plugin.GetElapsedTime();
+        DataPersistant.Get().plugin.SendLog("Player Die: " + timeplayed);
     }
     public void PlayerJump()
     {
