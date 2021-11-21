@@ -83,14 +83,22 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     void PlayerDie()
     {
+#if UNITY_ANDROID
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            double timeplayed = DataPersistant.Get().plugin.GetElapsedTime();
+            DataPersistant.Get().plugin.SendLog("Player Die: " + timeplayed);
+            Handheld.Vibrate();
+        }
+        playerStats.score
+#endif
+
         Debug.Log("Player Die.");
         UiMainMenuManager.Get().SwitchPanel(2);
         player.Die();
         Time.timeScale = 0;
         SaveStats();
         UiGamePlayManager.Get().UpdateGameOver();
-        double timeplayed = DataPersistant.Get().plugin.GetElapsedTime();
-        DataPersistant.Get().plugin.SendLog("Player Die: " + timeplayed);
     }
     public void PlayerJump()
     {
