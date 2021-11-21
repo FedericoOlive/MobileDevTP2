@@ -9,6 +9,9 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
 
     void Start()
     {
+#if UNITY_ANDROID
+        PlayGamesAchievement.Get().AchievementPlayFirtsTime();
+#endif
         if (!cam)
             if (!(Camera.main is null))
                 cam = Camera.main.transform;
@@ -90,7 +93,25 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
             DataPersistant.Get().plugin.SendLog("Player Die: " + timeplayed);
             Handheld.Vibrate();
         }
-        playerStats.score
+        if (playerStats.score >= 200)
+            PlayGamesAchievement.Get().AchievementWin200Points();
+        if (playerStats.score >= 300)
+            PlayGamesAchievement.Get().AchievementWin300Points();
+        if (playerStats.score >= 400)
+            PlayGamesAchievement.Get().AchievementWin400Points();
+        if (playerStats.score >= 600)
+            PlayGamesAchievement.Get().AchievementWin600Points();
+
+        if (playerStats.money >= 200)
+            PlayGamesAchievement.Get().AchievementEarn200Coins();
+        if (playerStats.money >= 300)
+            PlayGamesAchievement.Get().AchievementEarn300Coins();
+        if (playerStats.money >= 400)
+            PlayGamesAchievement.Get().AchievementEarn400Coins();
+        if (playerStats.money >= 600)
+            PlayGamesAchievement.Get().AchievementEarn600Coins();
+
+        PlayGamesAchievement.Get().SendScore((int) playerStats.score);
 #endif
 
         Debug.Log("Player Die.");
