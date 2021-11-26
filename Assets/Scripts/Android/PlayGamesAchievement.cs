@@ -26,74 +26,10 @@ public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
             textLog.text += text + "\n";
             Debug.Log(text);
         });
-        //OnLobbyLoaded();
-    }
-    void OnLobbyLoaded()
-    {
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-            .RequestIdToken()
-            .Build();
-
-        PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.Activate();
-        Invoke(nameof(OnLobbyConnect), 1f);
     }
 
-    // Then OnLobbyConnect is called 
 
-    public void OnLobbyConnect()
-    {
-        if (PlayGamesPlatform.Instance.IsAuthenticated())
-        {
-            StartCoroutine(OnAuthenticate());
-        }
-        else
-        {
-            Social.localUser.Authenticate((bool success) =>
-            {
-                if (success)
-                {
-                    StartCoroutine(OnAuthenticate());
-                }
-                else
-                {
-                    // GetUserInfo("");
-                }
-                string text = success ? "Logged in successfully" : "Login Failed";
-                textLog.text += text + "\n";
-                Debug.Log(text);
-            });
-        }
-    }
 
-    IEnumerator OnAuthenticate()
-    {
-
-        // Just in case, I do wait for the token
-
-        string _token = null;
-        int counter = 0;
-        do
-        {
-            if (counter++ > 3)
-            {
-                break;
-            }
-
-            yield return new WaitForSeconds(2.0f);
-
-            _token = ((PlayGamesLocalUser)Social.localUser).GetIdToken();
-        } while (string.IsNullOrEmpty(_token));
-
-        if (string.IsNullOrEmpty(_token))
-        {
-            // GetUserInfo("");
-
-            yield break;
-        }
-
-        // GetUserInfo(_token);
-    }
     public void SendScore(int score)
     {
         if (Social.localUser.authenticated)

@@ -86,12 +86,12 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     void PlayerDie()
     {
-//#if UNITY_ANDROID && !UNITY_EDITOR
+        Handheld.Vibrate();
+        //#if UNITY_ANDROID && !UNITY_EDITOR
         if (Social.localUser.authenticated)
         {
             double timeplayed = DataPersistant.Get().PluginGetElapsedTime();
             DataPersistant.Get().PluginSendLog("Player Die: " + timeplayed);
-            Handheld.Vibrate();
 
             if (playerStats.score >= 200)
                 PlayGamesAchievement.Get().AchievementWin200Points();

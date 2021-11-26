@@ -6337,6 +6337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   activateDebugLog: 1
+  activatePlugin: 1
   playerHistory:
     jumps: 0
     lifes: 3

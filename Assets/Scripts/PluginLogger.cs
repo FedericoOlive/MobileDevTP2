@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 public class PluginLogger
 {
-    private const string PackName = "com.OliveFederico.FlappyFleyLogger";
+    private const string PackName = "com.olivefederico.megaflappyfleylogger";
     private const string LoggerClassName = "FOLogger";
     private static AndroidJavaClass loggerClass = null;
     private static AndroidJavaObject loggerInstance = null;
