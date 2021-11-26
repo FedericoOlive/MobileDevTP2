@@ -200,7 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  textLog: {fileID: 2137265064}
 --- !u!4 &207954466
 Transform:
   m_ObjectHideFlags: 0
@@ -528,7 +527,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406813404}
-  - component: {fileID: 406813403}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -536,26 +534,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &406813403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406813402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54137b5ab8a1f014e922e1f8179b4c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  backGrounds:
-  - {fileID: 2096141075}
-  - {fileID: 1618960153}
-  - {fileID: 1690625558}
-  - {fileID: 1428774802}
-  - {fileID: 774167509}
-  - {fileID: 1049059932}
 --- !u!4 &406813404
 Transform:
   m_ObjectHideFlags: 0
@@ -632,7 +610,7 @@ GameObject:
   - component: {fileID: 454334116}
   - component: {fileID: 454334115}
   m_Layer: 5
-  m_Name: PanelCredits_Reff03
+  m_Name: PanelMarket_Reff03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,7 +624,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454334114}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1250,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &774167512
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1891,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &1049059935
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2287,7 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &1428774805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2616,7 +2594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 207954465}
-        m_MethodName: Start
+        m_MethodName: Initialize
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2735,7 +2713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &1618960156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3162,7 +3140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &1690625561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3303,6 +3281,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
+  playerSprites:
+  - {fileID: 7449630234791879323, guid: b8954d4a26055bb44b3540788cbeb0d7, type: 3}
+  - {fileID: -4333421759856417091, guid: b8954d4a26055bb44b3540788cbeb0d7, type: 3}
+  - {fileID: -7345198299920376758, guid: b8954d4a26055bb44b3540788cbeb0d7, type: 3}
+  - {fileID: 574285303202057654, guid: 5313ff641064c6d43949980c2cc53078, type: 3}
+  - {fileID: 1374501552641646830, guid: aeddb6ad0da26604aa1c40b8680c5a39, type: 3}
+  backGroundSprites:
+  - {fileID: 7651504611774323515, guid: b8954d4a26055bb44b3540788cbeb0d7, type: 3}
+  - {fileID: -7825291451231400654, guid: aeddb6ad0da26604aa1c40b8680c5a39, type: 3}
+  - {fileID: 8609492153827970993, guid: 5313ff641064c6d43949980c2cc53078, type: 3}
+  - {fileID: -2699409284917174542, guid: b8954d4a26055bb44b3540788cbeb0d7, type: 3}
+  - {fileID: 6190052300008326737, guid: aeddb6ad0da26604aa1c40b8680c5a39, type: 3}
+  - {fileID: -1463960574117443859, guid: 5313ff641064c6d43949980c2cc53078, type: 3}
+  obstaclesSprites: []
 --- !u!4 &1921223791
 Transform:
   m_ObjectHideFlags: 0
@@ -3735,7 +3727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829f2409fbda9e54d8e60fda9987cb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundManager: {fileID: 406813403}
+  backGroundManager: {fileID: 0}
 --- !u!212 &2096141078
 SpriteRenderer:
   m_ObjectHideFlags: 0

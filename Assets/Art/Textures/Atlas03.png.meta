@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -1463960574117443859
     second: BackGround02
+  - first:
+      213: 574285303202057654
+    second: PlayerExtra01
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,12 +46,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -155,7 +158,7 @@ TextureImporter:
         width: 52
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +179,7 @@ TextureImporter:
         width: 48
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,7 +200,7 @@ TextureImporter:
         width: 288
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,7 +221,7 @@ TextureImporter:
         width: 288
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: de68d8e3d97feabe0800000000000000
       internalID: -1463960574117443859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerExtra01
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 339
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd0619c07548f700800000000000000
+      internalID: 574285303202057654
       vertices: []
       indices: 
       edges: []

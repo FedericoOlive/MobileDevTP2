@@ -5,34 +5,53 @@ using GooglePlayGames.BasicApi;
 using TMPro;
 public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
 {
-    public TextMeshProUGUI textLog;
-#if UNITY_ANDROID //&& !UNITY_EDITOR
-    public static PlayGamesPlatform platform; 
-    
-    public void Start()
+    /*public TextMeshProUGUI textLog;
+//#if UNITY_ANDROID && !UNITY_EDITOR
+    //public static PlayGamesPlatform platform;
+
+    private void Start()
     {
         Initialize();
     }
-    private void Initialize()
+    public void Initialize()
     {
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
-        PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.DebugLogEnabled = true;
-        platform = PlayGamesPlatform.Activate();
-
-        Social.Active.localUser.Authenticate(success =>
-        {
-            if (success)
-            {
-                textLog.text += "Logged in successfully\n";
-                DataPersistant.Get().plugin.SendLog("Logged in successfully");
-            }
-            else
-            {
-                textLog.text += "Login Failed\n";
-                DataPersistant.Get().plugin.SendLog("Login Failed");
-            }
-        });
+        //if (platform == null)
+        //{
+        //    PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+        //
+        //    PlayGamesPlatform.InitializeInstance(config);
+        //    PlayGamesPlatform.DebugLogEnabled = true;
+        //    platform = PlayGamesPlatform.Activate();
+        //
+        //    PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (success) => { });
+        //
+        //    textLog.text += "No Existía instancia.\n";
+        //    textLog.text += Social.localUser.authenticated ? "Logged in successfully\n" : "Login Failed\n";
+        //}
+        //else
+        //{
+        //    textLog.text += "Ya Existe una Instancia.\n";
+        //    textLog.text += Social.localUser.authenticated ? "Logged in successfully\n" : "Login Failed\n";
+        //}
+        //PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+        //PlayGamesPlatform.InitializeInstance(config);
+        //PlayGamesPlatform.DebugLogEnabled = true;
+        //platform = PlayGamesPlatform.Activate();
+        //
+        //Social.Active.localUser.Authenticate(success =>
+        //{
+        //    if (success)
+        //    {
+        //        textLog.text += "Logged in successfully\n";
+        //        DataPersistant.Get().plugin.SendLog("Logged in successfully");
+        //    }
+        //    else
+        //    {
+        //        textLog.text += "Login Failed\n";
+        //        DataPersistant.Get().plugin.SendLog("Login Failed");
+        //    }
+        //});
+        //AchievementPlayFirtsTime();
     }
     public void SendScore(int score)
     {
@@ -59,7 +78,7 @@ public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
     {
         if (Social.localUser.authenticated)
         {
-            Social.ReportProgress("CgkIrIWusoIMEAIQAA", 100, success => { });
+            Social.ReportProgress("CgkI2tuH58YJEAIQAQ", 100, success => { });
         }
     }
     public void AchievementWin200Points()
@@ -118,5 +137,5 @@ public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
             Social.ReportProgress("CgkIrIWusoIMEAIQCA", 100, success => { });
         }
     }
-#endif
+//#endif*/
 }

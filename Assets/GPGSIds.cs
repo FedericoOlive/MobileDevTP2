@@ -24,16 +24,7 @@
 
 public static class GPGSIds
 {
-        public const string achievement_win_600_points = "CgkIrIWusoIMEAIQBA"; // <GPGSID>
-        public const string leaderboard_high_scores = "CgkIrIWusoIMEAIQCg"; // <GPGSID>
-        public const string achievement_win_400_points = "CgkIrIWusoIMEAIQAw"; // <GPGSID>
-        public const string achievement_win_200_points = "CgkIrIWusoIMEAIQAQ"; // <GPGSID>
-        public const string achievement_earn_600_coins = "CgkIrIWusoIMEAIQCA"; // <GPGSID>
-        public const string achievement_earn_400_coins = "CgkIrIWusoIMEAIQBw"; // <GPGSID>
-        public const string achievement_earn_300_coins = "CgkIrIWusoIMEAIQBg"; // <GPGSID>
-        public const string achievement_win_300_points = "CgkIrIWusoIMEAIQAg"; // <GPGSID>
-        public const string achievement_first_time = "CgkIrIWusoIMEAIQAA"; // <GPGSID>
-        public const string achievement_earn_200_coins = "CgkIrIWusoIMEAIQBQ"; // <GPGSID>
+        public const string achievement_first_time = "CgkI2tuH58YJEAIQAQ"; // <GPGSID>
 
 }
 

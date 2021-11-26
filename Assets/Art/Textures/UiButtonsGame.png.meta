@@ -32,6 +32,12 @@ TextureImporter:
   - first:
       213: -5195778764884319080
     second: UiButtonAchievements
+  - first:
+      213: 5234533282309455771
+    second: UiButtonAvailable
+  - first:
+      213: 6207408386307985016
+    second: UiButtonDisable
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -341,7 +347,7 @@ TextureImporter:
         width: 43
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +368,7 @@ TextureImporter:
         width: 43
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,6 +376,48 @@ TextureImporter:
       bones: []
       spriteID: 8946d83edb2e4e7b0800000000000000
       internalID: -5195778764884319080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonAvailable
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1174
+        width: 93
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb309594cc4a840800000000000000
+      internalID: 5234533282309455771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonDisable
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1174
+        width: 92
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e0ba10a05252650800000000000000
+      internalID: 6207408386307985016
       vertices: []
       indices: 
       edges: []
