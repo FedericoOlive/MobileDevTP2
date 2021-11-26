@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        DataPersistant.Get().InitPlayerLevel(this);
         PlayerInteract = PlayerStartGame;
         initialPosition = transform.position;
         CustomUpdate = UpdateWaitingInput;

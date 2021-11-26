@@ -18,6 +18,12 @@ public class ObstaclesManager : MonoBehaviour
         if(!cam)
             cam = Camera.main.transform;
     }
+
+    private void Start()
+    {
+        DataPersistant.Get().InitObstablesrLevel(this);
+    }
+
     private void Update()
     {
         if (cam.position.x > lastPosCam + distanceSpawn)

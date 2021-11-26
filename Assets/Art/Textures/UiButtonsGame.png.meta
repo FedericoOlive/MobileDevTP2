@@ -32,6 +32,30 @@ TextureImporter:
   - first:
       213: -5195778764884319080
     second: UiButtonAchievements
+  - first:
+      213: 5234533282309455771
+    second: UiButtonAvailable
+  - first:
+      213: 6207408386307985016
+    second: UiButtonDisable
+  - first:
+      213: 2490698173736374231
+    second: UiButtonsCheckOn
+  - first:
+      213: -5020548924985371503
+    second: UiButtonsUseOn
+  - first:
+      213: 7581812017909515956
+    second: UiButtonsUseOff
+  - first:
+      213: -743640855385034506
+    second: UiButtonBuyOn
+  - first:
+      213: 5089344810397520054
+    second: UiButtonBuyOff
+  - first:
+      213: 8172861047786926814
+    second: UiButtonsBack
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -341,7 +365,7 @@ TextureImporter:
         width: 43
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +386,7 @@ TextureImporter:
         width: 43
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,6 +394,174 @@ TextureImporter:
       bones: []
       spriteID: 8946d83edb2e4e7b0800000000000000
       internalID: -5195778764884319080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonAvailable
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1174
+        width: 93
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb309594cc4a840800000000000000
+      internalID: 5234533282309455771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonDisable
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1174
+        width: 92
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e0ba10a05252650800000000000000
+      internalID: 6207408386307985016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsCheckOn
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 480
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df4540faccb09220800000000000000
+      internalID: 2490698173736374231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsUseOn
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 137
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19417cc4a5d635ab0800000000000000
+      internalID: -5020548924985371503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsUseOff
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 137
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6c8413cd1083960800000000000000
+      internalID: 7581812017909515956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonBuyOn
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 823
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0be4ef49e0ea5f0800000000000000
+      internalID: -743640855385034506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonBuyOff
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 822
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0d83bf32cf0a640800000000000000
+      internalID: 5089344810397520054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonsBack
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 676
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed277ff32d5db6170800000000000000
+      internalID: 8172861047786926814
       vertices: []
       indices: 
       edges: []

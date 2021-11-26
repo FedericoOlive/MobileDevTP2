@@ -598,3 +598,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inUse: 0
   hitted: {fileID: 779985557522155988}
+  chanceApearReward: 100
+  columns:
+  - {fileID: 2650927922527353057}
+  bases:
+  - {fileID: 5948291238517056036}
+  - {fileID: 6693619896047199055}

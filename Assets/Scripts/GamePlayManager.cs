@@ -9,13 +9,13 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
 
     void Start()
     {
-#if UNITY_ANDROID
-        PlayGamesAchievement.Get().AchievementPlayFirtsTime();
-#endif
+        //#if UNITY_ANDROID && !UNITY_EDITOR
+        if (Social.localUser.authenticated)
+            PlayGamesAchievement.Get().AchievementPlayFirtsTime();
+        //#endif
         if (!cam)
             if (!(Camera.main is null))
                 cam = Camera.main.transform;
-
         player.onCollect += CollectPoints;
         player.onImpactObstacle += PlayerImpact;
         player.onJump += PlayerJump;
@@ -86,33 +86,34 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     void PlayerDie()
     {
-#if UNITY_ANDROID
-        if (Application.platform == RuntimePlatform.Android)
+//#if UNITY_ANDROID && !UNITY_EDITOR
+        if (Social.localUser.authenticated)
         {
-            double timeplayed = DataPersistant.Get().plugin.GetElapsedTime();
-            DataPersistant.Get().plugin.SendLog("Player Die: " + timeplayed);
+            double timeplayed = DataPersistant.Get().PluginGetElapsedTime();
+            DataPersistant.Get().PluginSendLog("Player Die: " + timeplayed);
             Handheld.Vibrate();
+
+            if (playerStats.score >= 200)
+                PlayGamesAchievement.Get().AchievementWin200Points();
+            if (playerStats.score >= 500)
+                PlayGamesAchievement.Get().AchievementWin500Points();
+            if (playerStats.score >= 1000)
+                PlayGamesAchievement.Get().AchievementWin1000Points();
+            if (playerStats.score >= 1500)
+                PlayGamesAchievement.Get().AchievementWin1500Points();
+
+            if (playerStats.money >= 200)
+                PlayGamesAchievement.Get().AchievementEarn200Coins();
+            if (playerStats.money >= 500)
+                PlayGamesAchievement.Get().AchievementEarn500Coins();
+            if (playerStats.money >= 850)
+                PlayGamesAchievement.Get().AchievementEarn850Coins();
+            if (playerStats.money >= 1000)
+                PlayGamesAchievement.Get().AchievementEarn1000Coins();
+
+            PlayGamesAchievement.Get().SendScore((int) playerStats.score);
         }
-        if (playerStats.score >= 200)
-            PlayGamesAchievement.Get().AchievementWin200Points();
-        if (playerStats.score >= 300)
-            PlayGamesAchievement.Get().AchievementWin300Points();
-        if (playerStats.score >= 400)
-            PlayGamesAchievement.Get().AchievementWin400Points();
-        if (playerStats.score >= 600)
-            PlayGamesAchievement.Get().AchievementWin600Points();
-
-        if (playerStats.money >= 200)
-            PlayGamesAchievement.Get().AchievementEarn200Coins();
-        if (playerStats.money >= 300)
-            PlayGamesAchievement.Get().AchievementEarn300Coins();
-        if (playerStats.money >= 400)
-            PlayGamesAchievement.Get().AchievementEarn400Coins();
-        if (playerStats.money >= 600)
-            PlayGamesAchievement.Get().AchievementEarn600Coins();
-
-        PlayGamesAchievement.Get().SendScore((int) playerStats.score);
-#endif
+//#endif
 
         Debug.Log("Player Die.");
         UiMainMenuManager.Get().SwitchPanel(2);
@@ -147,15 +148,21 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     void SaveStats()
     {
-        Debug.Log("----------Stats----------");
-        Debug.Log("Jumps:" + playerStats.jumps);
-        Debug.Log("Lifes:" + playerStats.lifes);
-        Debug.Log("Score:" + playerStats.score);
-        Debug.Log("GamePlayTime:" + playerStats.gamePlayTime);
-        Debug.Log("Money:" + playerStats.money);
-        Debug.Log("Recolected:" + playerStats.recolected);
-        Debug.Log("ObstaclesAvoided:" + playerStats.obstaclesAvoided);
-        Debug.Log("----------Stats----------");
+        DataPersistant.Get().playerHistory.money += playerStats.money;
+        DataPersistant.Get().playerHistory.score += playerStats.score;
+        DataPersistant.Get().playerHistory.gamePlayTime += playerStats.gamePlayTime;
+        DataPersistant.Get().playerHistory.jumps += playerStats.jumps;
+        DataPersistant.Get().playerHistory.recolected += playerStats.recolected;
+        DataPersistant.Get().playerHistory.obstaclesAvoided += playerStats.obstaclesAvoided;
+
+        DataPersistant.Get().PluginSendLog("----------Stats----------");
+        DataPersistant.Get().PluginSendLog("Money:" + playerStats.money);
+        DataPersistant.Get().PluginSendLog("Score:" + playerStats.score);
+        DataPersistant.Get().PluginSendLog("GamePlayTime:" + playerStats.gamePlayTime);
+        DataPersistant.Get().PluginSendLog("Jumps:" + playerStats.jumps);
+        DataPersistant.Get().PluginSendLog("Recolected:" + playerStats.recolected);
+        DataPersistant.Get().PluginSendLog("ObstaclesAvoided:" + playerStats.obstaclesAvoided);
+        DataPersistant.Get().PluginSendLog("----------Stats----------");
     }
     // ---------------------------------
     public PlayerStats GetPlayerStats() => playerStats;

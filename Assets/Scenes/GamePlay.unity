@@ -128,20 +128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 736841903894458479, guid: 79d82513d53580b4396d6d805c25619e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7265167112944279496, guid: 79d82513d53580b4396d6d805c25619e,
         type: 3}
       propertyPath: m_Name
       value: Obstacle03 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265167112944279496, guid: 79d82513d53580b4396d6d805c25619e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7265167112944279497, guid: 79d82513d53580b4396d6d805c25619e,
         type: 3}
@@ -213,20 +203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 310179508036272166, guid: dbb4f270be837344497d681ae0a516b7,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 9099506044678349728, guid: dbb4f270be837344497d681ae0a516b7,
         type: 3}
       propertyPath: m_Name
       value: Obstacle02 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099506044678349728, guid: dbb4f270be837344497d681ae0a516b7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9099506044678349729, guid: dbb4f270be837344497d681ae0a516b7,
         type: 3}
@@ -1111,20 +1091,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 310179508036272166, guid: dbb4f270be837344497d681ae0a516b7,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 9099506044678349728, guid: dbb4f270be837344497d681ae0a516b7,
         type: 3}
       propertyPath: m_Name
       value: Obstacle02 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099506044678349728, guid: dbb4f270be837344497d681ae0a516b7,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9099506044678349729, guid: dbb4f270be837344497d681ae0a516b7,
         type: 3}
@@ -1472,11 +1442,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 5275362043838173399, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8502789399683043045, guid: 51b623f773b20fc449a6774b3f9ce85e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1536,11 +1501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle01 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502789399683043046, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b623f773b20fc449a6774b3f9ce85e, type: 3}
@@ -2290,7 +2250,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 79.7
+  m_fontSize: 78.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2347,20 +2307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 736841903894458479, guid: 79d82513d53580b4396d6d805c25619e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7265167112944279496, guid: 79d82513d53580b4396d6d805c25619e,
         type: 3}
       propertyPath: m_Name
       value: Obstacle03 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265167112944279496, guid: 79d82513d53580b4396d6d805c25619e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7265167112944279497, guid: 79d82513d53580b4396d6d805c25619e,
         type: 3}
@@ -2779,20 +2729,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 3758719712683360254, guid: 2a125be171ccc5f449eb64fc70a6b156,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8925888672904035477, guid: 2a125be171ccc5f449eb64fc70a6b156,
         type: 3}
       propertyPath: m_Name
       value: Obstacle04 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925888672904035477, guid: 2a125be171ccc5f449eb64fc70a6b156,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8925888672904035478, guid: 2a125be171ccc5f449eb64fc70a6b156,
         type: 3}
@@ -5655,26 +5595,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 5275362043838173399, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502789399673362768, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502789399673362768, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502789399673362768, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8502789399683043045, guid: 51b623f773b20fc449a6774b3f9ce85e,
         type: 3}
       propertyPath: m_RootOrder
@@ -5734,11 +5654,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8502789399683043046, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b623f773b20fc449a6774b3f9ce85e, type: 3}
@@ -6704,6 +6619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28224e92ba079924893495b59fdf0303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
 --- !u!4 &994316796
 Transform:
   m_ObjectHideFlags: 0
@@ -6716,7 +6632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008450866
 GameObject:
@@ -7021,20 +6937,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 3758719712683360254, guid: 2a125be171ccc5f449eb64fc70a6b156,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8925888672904035477, guid: 2a125be171ccc5f449eb64fc70a6b156,
         type: 3}
       propertyPath: m_Name
       value: Obstacle04 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8925888672904035477, guid: 2a125be171ccc5f449eb64fc70a6b156,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8925888672904035478, guid: 2a125be171ccc5f449eb64fc70a6b156,
         type: 3}
@@ -7844,6 +7750,7 @@ MonoBehaviour:
   - {fileID: 1467325111}
   - {fileID: 235782709}
   - {fileID: 2003010429}
+  sameBackGround: 1
 --- !u!4 &1230480007
 Transform:
   m_ObjectHideFlags: 0
@@ -9412,50 +9319,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1492874632}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1505584451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1505584453}
-  - component: {fileID: 1505584452}
-  m_Layer: 0
-  m_Name: DataPersistant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1505584452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505584451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284e876b89346ca41972db3cdd0709ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
---- !u!4 &1505584453
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505584451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512008750
 GameObject:
   m_ObjectHideFlags: 0
@@ -11951,11 +11814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 736841903894458479, guid: 79d82513d53580b4396d6d805c25619e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7265167112944279496, guid: 79d82513d53580b4396d6d805c25619e,
         type: 3}
       propertyPath: m_Name
@@ -12025,11 +11883,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 5275362043838173399, guid: 51b623f773b20fc449a6774b3f9ce85e,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8502789399683043045, guid: 51b623f773b20fc449a6774b3f9ce85e,
         type: 3}
       propertyPath: m_RootOrder
@@ -12099,11 +11952,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 3758719712683360254, guid: 2a125be171ccc5f449eb64fc70a6b156,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8925888672904035477, guid: 2a125be171ccc5f449eb64fc70a6b156,
         type: 3}
       propertyPath: m_Name
@@ -12173,11 +12021,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 376701888}
     m_Modifications:
-    - target: {fileID: 310179508036272166, guid: dbb4f270be837344497d681ae0a516b7,
-        type: 3}
-      propertyPath: chanceApearReward
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 9099506044678349728, guid: dbb4f270be837344497d681ae0a516b7,
         type: 3}
       propertyPath: m_Name

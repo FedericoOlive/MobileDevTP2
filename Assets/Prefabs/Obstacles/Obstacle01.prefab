@@ -437,6 +437,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inUse: 0
   hitted: {fileID: 5572229733488044519}
+  chanceApearReward: 100
+  columns:
+  - {fileID: 8009191692513958189}
+  bases:
+  - {fileID: 7739463921205078435}
+  - {fileID: 2467578322762554332}
 --- !u!1 &9113804468491943215
 GameObject:
   m_ObjectHideFlags: 0

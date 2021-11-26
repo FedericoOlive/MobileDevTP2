@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -7811634408872351414
     second: ObstacleYellowBase
+  - first:
+      213: 1374501552641646830
+    second: PlayerExtra00
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,12 +58,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -183,10 +186,10 @@ TextureImporter:
       name: ObstacleBrownColumn
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 61
-        width: 48
-        height: 240
+        width: 52
+        height: 290
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +228,10 @@ TextureImporter:
       name: ObstacleYellowColumn
       rect:
         serializedVersion: 2
-        x: 170
-        y: 61
-        width: 48
-        height: 240
+        x: 112
+        y: 86
+        width: 52
+        height: 290
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,6 +283,27 @@ TextureImporter:
       bones: []
       spriteID: a49e1f794ef779390800000000000000
       internalID: -7811634408872351414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerExtra00
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 330
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0ad6431e5331310800000000000000
+      internalID: 1374501552641646830
       vertices: []
       indices: 
       edges: []
