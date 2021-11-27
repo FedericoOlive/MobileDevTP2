@@ -10,7 +10,6 @@ public class UiGamePlayManager : MonoBehaviourSingleton<UiGamePlayManager>
     public TextMeshProUGUI textLifes;
     public TextMeshProUGUI textMoney;
     public TextMeshProUGUI textTime;
-    public Image imgLifes;
     public UiLifes uiLifes;
 
     private float onTime;
