@@ -115,7 +115,7 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
         }
 //#endif
 
-        Debug.Log("Player Die.");
+        DataPersistant.Get().PluginSendLog("Player Die.");
         UiMainMenuManager.Get().SwitchPanel(2);
         player.Die();
         Time.timeScale = 0;

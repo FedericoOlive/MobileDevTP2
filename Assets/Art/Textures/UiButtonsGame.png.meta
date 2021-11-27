@@ -56,6 +56,9 @@ TextureImporter:
   - first:
       213: 8172861047786926814
     second: UiButtonsBack
+  - first:
+      213: 3445635022815354435
+    second: UiButtonLogs
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -554,7 +557,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -562,6 +565,27 @@ TextureImporter:
       bones: []
       spriteID: ed277ff32d5db6170800000000000000
       internalID: 8172861047786926814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiButtonLogs
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 235
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34edd882cca51df20800000000000000
+      internalID: 3445635022815354435
       vertices: []
       indices: 
       edges: []

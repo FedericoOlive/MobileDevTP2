@@ -6,17 +6,22 @@ using UnityEngine.SceneManagement;
 public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
 {
     [SerializeField] private List<CanvasGroup> menues = new List<CanvasGroup>();
-    public enum Menues { Main, Credits, GameOver }
+    public enum Menues { Main, Credits, GameOver, Logs }
     public Menues menuActual = Menues.Main;
     [SerializeField] private float timeTransition = 0.5f;
     private float onTime;
     public TextMeshProUGUI textVersion;
+    public TextMeshProUGUI textLog;
 
     private void Start()
     {
         if (textVersion)
             textVersion.text = Application.version;
         ResetMenu();
+        if (textLog)
+        {
+            DataPersistant.onSendLog += SendLogMsj;
+        }
     }
     private void Reset()
     {
@@ -80,5 +85,18 @@ public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
     public void ExitGame()
     {
         Application.Quit();
+    }
+    private void SendLogMsj(string msj)
+    {
+        textLog.text += msj;
+    }
+    public void ClearLogMsj()
+    {
+        DataPersistant.Get().PluginClearLogs();
+        textLog.text = "";
+    }
+    public void ReadLogMsj()
+    {
+        textLog.text= DataPersistant.Get().PluginReadFile();
     }
 }

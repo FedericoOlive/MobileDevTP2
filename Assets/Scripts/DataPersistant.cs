@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class DataPersistant : MonoBehaviourSingleton<DataPersistant>
 {
+    public static Action<string> onSendLog;
     public bool activateDebugLog;
     public bool activatePlugin;
     private PluginLogger plugin;
@@ -51,10 +52,21 @@ public class DataPersistant : MonoBehaviourSingleton<DataPersistant>
     }
     public void PluginSendLog(string msj)
     {
-        if (activateDebugLog)
-            Debug.Log("Plugin: " + msj);
-        if (activatePlugin)
-            plugin.SendLog(msj);
+        onSendLog?.Invoke(msj);
+        Debug.Log("Plugin: " + msj);
+        plugin.SendLog(msj);
+    }
+    public string PluginReadFile()
+    {
+        string text = "";
+
+        text = plugin.ReadLogs();
+
+        return text;
+    }
+    public void PluginClearLogs()
+    {
+        plugin.ClearLogs();
     }
 }
 //[Serializable] 

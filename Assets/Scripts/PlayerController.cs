@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour
         LayerMask otheLayerMask = other.gameObject.layer;
         if (Global.Get().LayerEqualKiller(otheLayerMask))
         {
-            Debug.Log("Player choca contra: " + other.name, gameObject);
+            DataPersistant.Get().PluginSendLog("Player choca contra: " + other.name);
+            //Debug.Log("Player choca contra: " + other.name, gameObject);
             ImpactObstacle();
         }
         else if (Global.Get().LayerEqualReward(otheLayerMask))

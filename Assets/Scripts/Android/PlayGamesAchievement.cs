@@ -1,35 +1,40 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using TMPro;
 using System.Collections;
+using System.Net.Mime;
+using TMPro;
 
 public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
 {
-    public TextMeshProUGUI textLog;
 //#if UNITY_ANDROID && !UNITY_EDITOR
     public static PlayGamesPlatform platform;
     
     public void Initialize()
     {
-        if (platform == null)
+        if (Application.platform == RuntimePlatform.Android)
         {
-            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
-            PlayGamesPlatform.InitializeInstance(config);
-            PlayGamesPlatform.DebugLogEnabled = true;
-            platform = PlayGamesPlatform.Activate();
+            if (platform == null)
+            {
+                PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+                PlayGamesPlatform.InitializeInstance(config);
+                PlayGamesPlatform.DebugLogEnabled = true;
+                platform = PlayGamesPlatform.Activate();
+            }
+
+            Social.Active.localUser.Authenticate(success =>
+            {
+                string text = success ? "Logged in successfully" : "Login Failed";
+                UiMainMenuManager.Get().textLog.text += text + "\n";
+
+                Debug.Log(text);
+            });
         }
-        
-        Social.Active.localUser.Authenticate(success =>
+        else
         {
-            string text = success ? "Logged in successfully" : "Login Failed";
-            textLog.text += text + "\n";
-            Debug.Log(text);
-        });
+            
+        }
     }
-
-
-
     public void SendScore(int score)
     {
         if (Social.localUser.authenticated)
