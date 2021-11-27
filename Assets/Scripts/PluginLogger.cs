@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class PluginLogger
 {
     private const string PackName = "com.olivefederico.megaflappyfleylogger";
@@ -23,26 +22,17 @@ public class PluginLogger
             unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
             context = activity.Call<AndroidJavaObject>("getApplicationContext");
-
-            //isFileCreated = loggerInstance.Call<bool>("IsFileCreated", context);
-            //if (isFileCreated)
-            //{
-            //    //loggerInstance.Call("WriteFile");
-            //}
-            //else
-            //{
-            //    loggerInstance.Call("CreateDirectory");
-            //}
+            
             loggerInstance.Call("CreateDirectory", context);
             DataPersistant.Get().PluginSendLog("Juego Comenzado");
         }
     }
-    public void SendLog(string msj)
+    public void SendLog(string msg)
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            loggerInstance.Call("SendLog", msj);
-            loggerInstance.Call("WriteFile", msj);
+            loggerInstance.Call("SendLog", msg);
+            loggerInstance.Call("WriteFile", msg, context);
         }
     }
     public double GetElapsedTime()
@@ -61,8 +51,7 @@ public class PluginLogger
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            //loggerInstance.Call("ClearLogs");
-            //loggerInstance.Call("FileWasDeleted.");
+            loggerInstance.Call("ClearLogs", context);
         }
     }
 }

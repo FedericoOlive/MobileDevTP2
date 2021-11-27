@@ -59,6 +59,8 @@ public class DataPersistant : MonoBehaviourSingleton<DataPersistant>
     }
     public void PluginClearLogs()
     {
+        onSendLog?.Invoke("");
+        Debug.Log("Logs Cleneados.");
         plugin.ClearLogs();
     }
 }

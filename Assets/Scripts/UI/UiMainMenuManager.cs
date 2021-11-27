@@ -93,11 +93,13 @@ public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
     }
     public void ClearLogMsj()
     {
-        //DataPersistant.Get().PluginClearLogs();
-        //textLog.text = "";
+        DataPersistant.Get().PluginClearLogs();
+        textLog.text = "";
     }
     public void ReadLogMsj()
     {
-        textLog.text= DataPersistant.Get().PluginReadFile();
+        string text = DataPersistant.Get().PluginReadFile();
+        Debug.Log(text);
+        textLog.text = text;
     }
 }

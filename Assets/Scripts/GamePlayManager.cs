@@ -3,16 +3,18 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
 {
     public Transform cam;
     private float gameSpeed = 5;
+    private float scoreMultiplier = 10;
+    private float scorePerLife = 100;
 
     public PlayerController player;
     [SerializeField] private PlayerStats playerStats = new PlayerStats();
 
     void Start()
     {
-        //#if UNITY_ANDROID && !UNITY_EDITOR
+//#if UNITY_ANDROID && !UNITY_EDITOR
         if (Social.localUser.authenticated)
             PlayGamesAchievement.Get().AchievementPlayFirtsTime();
-        //#endif
+
         if (!cam)
             if (!(Camera.main is null))
                 cam = Camera.main.transform;
@@ -26,7 +28,7 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     {
         float time = Time.deltaTime;
         playerStats.gamePlayTime += time;
-        playerStats.score += (time * 10);
+        playerStats.score += (time * scoreMultiplier);
     }
     private void FixedUpdate()
     {
@@ -48,7 +50,7 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
                 }
                 else
                 {
-                    playerStats.score += 100;
+                    playerStats.score += scorePerLife;
                     UiGamePlayManager.Get().ScoreUpdated();
                 }
                 break;
@@ -67,6 +69,7 @@ public class GamePlayManager : MonoBehaviourSingleton<GamePlayManager>
     }
     public void PlayerImpact()
     {
+        Handheld.Vibrate();
         playerStats.lifes--;
         if (playerStats.lifes <= 0)
         {

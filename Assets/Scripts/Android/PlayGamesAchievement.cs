@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using System.Collections;
-using System.Net.Mime;
-using TMPro;
-
 public class PlayGamesAchievement : MonoBehaviourSingleton<PlayGamesAchievement>
 {
 //#if UNITY_ANDROID && !UNITY_EDITOR
     public static PlayGamesPlatform platform;
-    
+
+    private void Start()
+    {
+        Invoke(nameof(Initialize), 0.5f);
+    }
+
     public void Initialize()
     {
         if (Application.platform == RuntimePlatform.Android)

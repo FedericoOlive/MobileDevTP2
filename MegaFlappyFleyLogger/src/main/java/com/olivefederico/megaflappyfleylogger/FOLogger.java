@@ -7,6 +7,7 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +16,7 @@ import java.io.OutputStreamWriter;
 
 public class FOLogger extends Activity {
     public static final FOLogger _instance = new FOLogger();
-    private static final String logTag = "OliveLogger: ";
+    private static final String logTag = "OliveLogger: ";     // Unity|megaflappyfley
     private static long startTime;
     private static OutputStreamWriter outputStreamWriter;
     private static String fileName= "Logs.txt";
@@ -37,6 +38,7 @@ public class FOLogger extends Activity {
     private boolean IsFileCreated(Context context) {
         try {
             InputStream inputStream = context.openFileInput(fileName);
+            outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_APPEND));
             inputStream.close();
             return true;
         } catch (FileNotFoundException e) {
@@ -62,18 +64,31 @@ public class FOLogger extends Activity {
             SendLog("File ERROR Created");
         }
     }
-    public void WriteFile(String msg) {
+    public void WriteFile(String msg, Context context) {
         try {
-            outputStreamWriter.write(msg);
+            OutputStreamWriter streamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_APPEND));
+            streamWriter.write(msg + "\n");
+            streamWriter.close();
         } catch (IOException e) {
             SendLog("File can't Written: " + e);
         }
     }
+    public void ClearLogs(Context context)
+    {
+        try {
+            OutputStreamWriter streamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_PRIVATE));
+            streamWriter.write(" ");
+            streamWriter.close();
+        } catch (IOException e) {
+            SendLog("File can't Clean: " + e);
+        }
+    }
     public String ReadFile(Context context) {
         String text = "";
+        SendLog("Start Reading.");
         try {
             InputStream inputStream = context.openFileInput(fileName);
-
+            SendLog("File Opened.");
             if (inputStream != null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -86,6 +101,7 @@ public class FOLogger extends Activity {
 
                 inputStream.close();
                 text = stringBuilder.toString();
+                SendLog("File Content: " + text);
             }
         } catch (FileNotFoundException e) {
             SendLog("File doesn't exist.");
