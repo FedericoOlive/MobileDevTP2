@@ -23,23 +23,26 @@ public class PluginLogger
             unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
             context = activity.Call<AndroidJavaObject>("getApplicationContext");
-            isFileCreated = loggerInstance.Call<bool>("IsFileCreated", context);
 
-            if (isFileCreated)
-            {
-                //loggerInstance.Call("WriteFile");
-            }
-            else
-            {
-                loggerInstance.Call("CreateDirectory");
-            }
+            //isFileCreated = loggerInstance.Call<bool>("IsFileCreated", context);
+            //if (isFileCreated)
+            //{
+            //    //loggerInstance.Call("WriteFile");
+            //}
+            //else
+            //{
+            //    loggerInstance.Call("CreateDirectory");
+            //}
+            loggerInstance.Call("CreateDirectory", context);
+            DataPersistant.Get().PluginSendLog("Juego Comenzado");
         }
     }
-    public void SendLog(string msg)
+    public void SendLog(string msj)
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            loggerInstance.Call("SendLog", msg);
+            loggerInstance.Call("SendLog", msj);
+            loggerInstance.Call("WriteFile", msj);
         }
     }
     public double GetElapsedTime()
@@ -51,12 +54,15 @@ public class PluginLogger
     public string ReadLogs()
     {
         if (Application.platform == RuntimePlatform.Android)
-            return loggerInstance.Call<string>("ReadFile");
+            return loggerInstance.Call<string>("ReadFile", context);
         return "Not Android";
     }
     public void ClearLogs()
     {
         if (Application.platform == RuntimePlatform.Android)
-            loggerInstance.Call("ClearLogs");
+        {
+            //loggerInstance.Call("ClearLogs");
+            //loggerInstance.Call("FileWasDeleted.");
+        }
     }
 }

@@ -19,7 +19,6 @@ public class FOLogger extends Activity {
     private static long startTime;
     private static OutputStreamWriter outputStreamWriter;
     private static String fileName= "Logs.txt";
-    private static Context context;
 
     public static FOLogger GetInstance() {
         android.util.Log.d(logTag, "Get Instance Plugin");
@@ -35,17 +34,9 @@ public class FOLogger extends Activity {
         return (System.currentTimeMillis() - startTime) / 1000.0f;
     }
 
-
-    //-------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------
-    //-------------------------------------------------------------------------------
-
-    public boolean IsFileCreated(Context _context) {
-        context = _context;
+    private boolean IsFileCreated(Context context) {
         try {
-            InputStream inputStream = _context.openFileInput(fileName);
+            InputStream inputStream = context.openFileInput(fileName);
             inputStream.close();
             return true;
         } catch (FileNotFoundException e) {
@@ -56,11 +47,13 @@ public class FOLogger extends Activity {
         }
         return false;
     }
-    public void CreateDirectory() {
-        CreateFile();
-        CloseFile();
+    public void CreateDirectory(Context context) {
+        if(!IsFileCreated(context)) {
+            CreateFile(context);
+            CloseFile();
+        }
     }
-    private void CreateFile() {
+    private void CreateFile(Context context) {
         SendLog("Creating File...");
         try {
             outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_APPEND));
@@ -69,14 +62,14 @@ public class FOLogger extends Activity {
             SendLog("File ERROR Created");
         }
     }
-    public void WriteFile(String data) {
+    public void WriteFile(String msg) {
         try {
-            outputStreamWriter.write(data);
+            outputStreamWriter.write(msg);
         } catch (IOException e) {
-            SendLog("File can't Written");
+            SendLog("File can't Written: " + e);
         }
     }
-    public String ReadFile() {
+    public String ReadFile(Context context) {
         String text = "";
         try {
             InputStream inputStream = context.openFileInput(fileName);

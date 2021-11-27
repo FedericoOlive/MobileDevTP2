@@ -17,12 +17,9 @@ public class DataPersistant : MonoBehaviourSingleton<DataPersistant>
 
     void Start()
     {
-        if (activatePlugin)
-        {
-            plugin = new PluginLogger();
-            plugin.Init();
-        }
-        PluginSendLog("Juego Comenzado" + Time.time);
+        plugin = new PluginLogger();
+        plugin.Init();
+        
     }
     public void InitPlayerLevel(PlayerController player)
     {
@@ -58,11 +55,7 @@ public class DataPersistant : MonoBehaviourSingleton<DataPersistant>
     }
     public string PluginReadFile()
     {
-        string text = "";
-
-        text = plugin.ReadLogs();
-
-        return text;
+        return plugin.ReadLogs();
     }
     public void PluginClearLogs()
     {

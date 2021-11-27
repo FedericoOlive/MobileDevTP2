@@ -21,6 +21,7 @@ public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
         if (textLog)
         {
             DataPersistant.onSendLog += SendLogMsj;
+            textLog.text = DataPersistant.Get().PluginReadFile();
         }
     }
     private void Reset()
@@ -92,8 +93,8 @@ public class UiMainMenuManager : MonoBehaviourSingleton<UiMainMenuManager>
     }
     public void ClearLogMsj()
     {
-        DataPersistant.Get().PluginClearLogs();
-        textLog.text = "";
+        //DataPersistant.Get().PluginClearLogs();
+        //textLog.text = "";
     }
     public void ReadLogMsj()
     {
