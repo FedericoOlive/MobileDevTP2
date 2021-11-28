@@ -1,0 +1,6 @@
+Factory Method: MonoBehaviourSingleton.cs
+Strategy: PlayerController.cs
+Adapter: Hitted.cs
+Singleton: MonoBehaviourSingleton.cs
+Memento: Uso la funcion "Reset" que modifica a los valores predeterminados por mi. 
+Mediator: Global.cs, GamePlayManager.cs
